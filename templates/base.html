@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- http://jinja.pocoo.org/docs/2.10/templates/#base-template -->
+    {% block head %}
+    <link rel="stylesheet" href="static/style.css" />
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+    </style> 
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Kashu</h1>
+    </header>
+
+    <nav>
+        <a href="/about">About</a>
+    </nav>
+
+    <main>
+        <div id="content">{% block content %}{% endblock %}</div>
+    <main>
+
+    <footer>
+        {% block footer %}
+        &copy; Copyright 2018 by Moo.
+        {% endblock %}
+    </footer>
+</body>
+</html>
